@@ -1,12 +1,12 @@
 from functools import wraps
-from typing import Callable
+from typing import Callable, Optional
 
 from throttler import ExecutionTimer, Throttler, ThrottlerSimultaneous, Timer
 
 
-def throttle(rate_limit: int, period: float = 1.0):
+def throttle(rate_limit: int, period: float = 1.0, throttle_cb: Optional[Callable] = None):
     def decorator(func):
-        throttler = Throttler(rate_limit, period)
+        throttler = Throttler(rate_limit, period, throttle_cb)
 
         @wraps(func)
         async def wrapper(*args, **kwargs):
