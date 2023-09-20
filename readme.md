@@ -1,3 +1,5 @@
+> This is fork of [uburuntu/throttler](https://github.com/uburuntu/throttler) with callback on throttling
+
 # Throttler
 
 [![Python](https://img.shields.io/badge/Python-3.6%20%7C%203.7%20%7C%203.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue.svg?longCache=true)]()

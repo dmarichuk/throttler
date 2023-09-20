@@ -29,7 +29,7 @@ def load_requirements(filename: str) -> list:
     return requirements
 
 
-module_name = 'throttler'
+module_name = 'throttler-cb'
 module = get_module(module_name)
 
 setuptools.setup(
@@ -42,8 +42,8 @@ setuptools.setup(
     platforms='all',
     long_description=read('readme.md'),
     long_description_content_type='text/markdown',
-    url='https://github.com/uburuntu/{}'.format(module_name),
-    download_url='https://github.com/uburuntu/{}/archive/master.zip'.format(module_name),
+    url='https://github.com/dmarichuk/throttler',
+    download_url='https://github.com/dmarichuk/throttler/archive/master.zip',
     packages=setuptools.find_packages(exclude=['examples', 'tests']),
     include_package_data=True,
     install_requires=[],
